@@ -1,5 +1,6 @@
 let container = document.getElementById("timers-container");
 let addBtn = document.getElementById("add-timer-btn");
+let sound = document.getElementById("alarm-sound");
 
 addBtn.onclick = () => {
   let timerDiv = document.createElement("div");
@@ -16,6 +17,7 @@ addBtn.onclick = () => {
       <button class="start">Start</button>
       <button class="pause">Pause</button>
       <button class="reset">Reset</button>
+      <button class="delete">X</button>
     </div>
   `;
 
@@ -26,6 +28,7 @@ addBtn.onclick = () => {
   let startBtn = timerDiv.querySelector(".start");
   let pauseBtn = timerDiv.querySelector(".pause");
   let resetBtn = timerDiv.querySelector(".reset");
+  let deleteBtn = timerDiv.querySelector(".delete");
 
   let time = 0;
   let interval = null;
@@ -40,7 +43,10 @@ addBtn.onclick = () => {
 
   startBtn.onclick = () => {
     if (interval) return;
-    if (time === 0) time = parseInt(input.value) || 0;
+
+    if (time === 0) {
+      time = parseInt(input.value) || 0;
+    }
 
     interval = setInterval(() => {
       if (time > 0) {
@@ -49,7 +55,12 @@ addBtn.onclick = () => {
       } else {
         clearInterval(interval);
         interval = null;
-        alert("Hết giờ!");
+
+        // 🔊 phát âm thanh
+        sound.currentTime = 0;
+        sound.play();
+
+        alert("⏰ Hết giờ!");
       }
     }, 1000);
   };
@@ -64,5 +75,10 @@ addBtn.onclick = () => {
     interval = null;
     time = 0;
     updateDisplay();
+  };
+
+  deleteBtn.onclick = () => {
+    clearInterval(interval);
+    timerDiv.remove();
   };
 };
