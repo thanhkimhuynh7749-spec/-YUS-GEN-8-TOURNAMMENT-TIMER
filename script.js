@@ -7,10 +7,6 @@ addBtn.onclick = () => {
   timerDiv.className = "timer-app";
 
   timerDiv.innerHTML = `
-    <div style="font-weight:bold; margin-bottom:5px;">
-      YUS DEBATING TOURNAMENT
-    </div>
-
     <input class="name-input" placeholder="Tên đồng hồ">
 
     <div class="timer-display">00:00</div>
@@ -60,10 +56,9 @@ addBtn.onclick = () => {
         clearInterval(interval);
         interval = null;
 
+        // 🔊 chỉ phát âm thanh, KHÔNG alert
         sound.currentTime = 0;
         sound.play();
-
-        alert("⏰ Hết giờ!");
       }
     }, 1000);
   };
