@@ -1,125 +1,19 @@
-/* Base styles */
-* {
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Timer App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  background: url('bg.png') no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  <h1>Timer App</h1>
+  <button id="add-timer-btn">Add Timer</button>
 
-h1 {
-  margin: 10px;
-  text-shadow: 2px 2px 6px #000;
-}
+  <div id="timers-wrapper">
+    <div id="timers-container"></div>
+    <div id="extra-timer-container"></div>
+  </div>
 
-#add-timer-btn {
-  margin: 10px;
-  padding: 12px 25px;
-  font-size: 1.1rem;
-  border-radius: 12px;
-  border: none;
-  background-color: #28a745;
-  cursor: pointer;
-  color: white;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-  transition: background-color 0.3s ease;
-}
-
-#add-timer-btn:disabled {
-  background-color: grey;
-  cursor: not-allowed;
-}
-
-#timers-wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  width: 100%;
-  flex-grow: 1;
-  padding: 10px 20px;
-  box-sizing: border-box;
-}
-
-#timers-container,
-#extra-timer-container {
-  width: 600px;
-  max-height: 80vh;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-.timer-app {
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 15px;
-  padding: 12px 20px;    /* Reduced vertical padding */
-  width: 100%;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-}
-
-.name-input {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  padding: 5px;
-  border-radius: 8px;
-  border: none;
-  text-align: center;
-  width: 90%;
-}
-
-.timer-display {
-  font-size: 3rem;        /* Keep font size */
-  font-weight: bold;
-  margin: 5px 0;          /* Reduced vertical margin */
-  text-shadow: 2px 2px 5px #000;
-  user-select: none;
-}
-
-.time-input {
-  margin: 10px 0;
-  padding: 5px;
-  border-radius: 8px;
-  border: none;
-  width: 60%;
-  text-align: center;
-  font-size: 1rem;
-}
-
-.buttons-container {
-  display: flex;
-  gap: 8px;               /* Slightly smaller gap */
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 5px;        /* Bring buttons closer */
-}
-
-.buttons-container button {
-  padding: 6px 14px;      /* Keep button size */
-  font-size: 1rem;        /* Keep font size */
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  background-color: #1e90ff;
-  color: white;
-  transition: background-color 0.3s ease;
-}
-
-.buttons-container button:hover {
-  background-color: #0f68d9;
-}
+</body>
+</html>
