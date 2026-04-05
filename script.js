@@ -1,10 +1,10 @@
 let container = document.getElementById("timers-container");
-let addBtn = document.getElementById("add-timer-btn");
+let addBtn = document.getElementById("Thêm-thời-gian-btn");
 let sound = document.getElementById("alarm-sound");
 
 addBtn.onclick = () => {
   let timerDiv = document.createElement("div");
-  timerDiv.className = "timer-app";
+  timerDiv.className = "YUS-Deabating-Tournament";
 
   timerDiv.innerHTML = `
     <input class="name-input" placeholder="Tên timer">
@@ -25,9 +25,9 @@ addBtn.onclick = () => {
 
   let display = timerDiv.querySelector(".timer-display");
   let input = timerDiv.querySelector(".time-input");
-  let startBtn = timerDiv.querySelector(".start");
-  let pauseBtn = timerDiv.querySelector(".pause");
-  let resetBtn = timerDiv.querySelector(".reset");
+  let startBtn = timerDiv.querySelector(".Bắt đầu");
+  let pauseBtn = timerDiv.querySelector(".Dừng");
+  let resetBtn = timerDiv.querySelector(".Bắt-đầu-lại");
   let deleteBtn = timerDiv.querySelector(".delete");
 
   let time = 0;
