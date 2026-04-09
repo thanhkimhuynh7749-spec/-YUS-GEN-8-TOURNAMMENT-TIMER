@@ -7,7 +7,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background: url('1200  (5).png') no-repeat center center fixed;
+  background: url('1200 (5).png') no-repeat center center fixed;
   background-size: cover;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
@@ -22,17 +22,22 @@ h1 {
   text-shadow: 2px 2px 6px #000;
 }
 
+/* NÚT ADD TIMER */
 #add-timer-btn {
   margin: 10px;
   padding: 12px 25px;
   font-size: 1.1rem;
   border-radius: 12px;
   border: none;
-  background-color: #28a745;
+  background-color: #e63946; /* 🔴 đỏ */
   cursor: pointer;
   color: white;
   box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-  transition: background-color 0.3s ease;
+  transition: 0.3s;
+}
+
+#add-timer-btn:hover {
+  background-color: #c1121f;
 }
 
 #add-timer-btn:disabled {
@@ -47,7 +52,6 @@ h1 {
   width: 100%;
   flex-grow: 1;
   padding: 10px 20px;
-  box-sizing: border-box;
 }
 
 #timers-container,
@@ -61,8 +65,9 @@ h1 {
   gap: 15px;
 }
 
+/* KHUNG TIMER */
 .timer-app {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(40, 0, 0, 0.6); /* 🔴 nền đỏ đậm */
   border-radius: 15px;
   padding: 12px 20px;
   width: 100%;
@@ -70,9 +75,10 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
 }
 
+/* INPUT */
 .name-input {
   font-size: 1.2rem;
   margin-bottom: 10px;
@@ -83,12 +89,14 @@ h1 {
   width: 90%;
 }
 
+/* DISPLAY TIME */
 .timer-display {
   font-size: 3rem;
   font-weight: bold;
   margin: 5px 0;
   text-shadow: 2px 2px 5px #000;
   user-select: none;
+  color: #ffccd5; /* 🔴 hồng nhạt */
 }
 
 .time-input {
@@ -101,6 +109,7 @@ h1 {
   font-size: 1rem;
 }
 
+/* BUTTONS */
 .buttons-container {
   display: flex;
   gap: 8px;
@@ -115,11 +124,11 @@ h1 {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  background-color: #1e90ff;
+  background-color: #e63946; /* 🔴 đỏ */
   color: white;
-  transition: background-color 0.3s ease;
+  transition: 0.3s;
 }
 
 .buttons-container button:hover {
-  background-color: #0f68d9;
+  background-color: #a4161a; /* 🔴 đỏ đậm */
 }
