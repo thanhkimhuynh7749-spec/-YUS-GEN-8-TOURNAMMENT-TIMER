@@ -7,7 +7,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background: url('1200  (5).png') no-repeat center center fixed;
+  background: url('1200 (5).png') no-repeat center center fixed;
   background-size: cover;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
@@ -17,29 +17,35 @@ html, body {
   align-items: center;
 }
 
+/* TIÊU ĐỀ CHÍNH */
 h1 {
-  margin: 10px;
-  text-shadow: 2px 2px 6px #000;
+  margin: 15px;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255,0,0,0.8);
 }
 
+/* NÚT ADD */
 #add-timer-btn {
   margin: 10px;
   padding: 12px 25px;
   font-size: 1.1rem;
   border-radius: 12px;
   border: none;
-  background-color: #28a745;
+  background: linear-gradient(45deg, #ff4d4d, #b30000);
   cursor: pointer;
   color: white;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-  transition: background-color 0.3s ease;
+  box-shadow: 0 0 10px rgba(255,0,0,0.6);
+  transition: 0.3s;
 }
 
-#add-timer-btn:disabled {
-  background-color: grey;
-  cursor: not-allowed;
+#add-timer-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,0,0,0.9);
 }
 
+/* CONTAINER */
 #timers-wrapper {
   display: flex;
   justify-content: center;
@@ -47,7 +53,6 @@ h1 {
   width: 100%;
   flex-grow: 1;
   padding: 10px 20px;
-  box-sizing: border-box;
 }
 
 #timers-container,
@@ -58,42 +63,57 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 }
 
+/* KHUNG TIMER - GLASS EFFECT */
 .timer-app {
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 15px;
-  padding: 12px 20px;    /* Reduced vertical padding */
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px); /* 🔥 kính mờ */
+  border-radius: 20px;
+  padding: 20px;
   width: 100%;
   max-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255,0,0,0.3);
+  box-shadow: 0 0 25px rgba(255,0,0,0.25);
+  transition: 0.3s;
 }
 
+.timer-app:hover {
+  box-shadow: 0 0 35px rgba(255,0,0,0.5);
+}
+
+/* INPUT */
 .name-input {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 10px;
-  padding: 5px;
+  padding: 6px;
   border-radius: 8px;
   border: none;
   text-align: center;
   width: 90%;
 }
 
+/* ĐỒNG HỒ */
 .timer-display {
-  font-size: 3rem;        /* Keep font size */
+  font-size: 3.5rem;
   font-weight: bold;
-  margin: 5px 0;          /* Reduced vertical margin */
-  text-shadow: 2px 2px 5px #000;
-  user-select: none;
+  margin: 10px 0;
+  letter-spacing: 2px;
+  color: #ffccd5;
+  text-shadow:
+    0 0 5px #ff4d4d,
+    0 0 10px #ff0000,
+    0 0 20px #ff0000;
 }
 
+/* INPUT TIME */
 .time-input {
   margin: 10px 0;
-  padding: 5px;
+  padding: 6px;
   border-radius: 8px;
   border: none;
   width: 60%;
@@ -101,25 +121,38 @@ h1 {
   font-size: 1rem;
 }
 
+/* BUTTONS */
 .buttons-container {
   display: flex;
-  gap: 8px;               /* Slightly smaller gap */
+  gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 5px;        /* Bring buttons closer */
+  margin-top: 8px;
 }
 
 .buttons-container button {
-  padding: 6px 14px;      /* Keep button size */
-  font-size: 1rem;        /* Keep font size */
+  padding: 7px 16px;
+  font-size: 0.95rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  background-color: #1e90ff;
+  background: linear-gradient(45deg, #ff4d4d, #800000);
   color: white;
-  transition: background-color 0.3s ease;
+  transition: 0.25s;
+  box-shadow: 0 0 8px rgba(255,0,0,0.5);
 }
 
 .buttons-container button:hover {
-  background-color: #0f68d9;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(255,0,0,0.9);
+}
+
+/* SCROLLBAR đẹp hơn */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255,0,0,0.5);
+  border-radius: 10px;
 }
