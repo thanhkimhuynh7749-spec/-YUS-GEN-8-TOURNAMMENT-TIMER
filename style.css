@@ -10,18 +10,18 @@ html, body {
   background: url('1200.png') no-repeat center center fixed;
   background-size: cover;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+  color: rgba(255, 255, 255, 0.85); /* 🔥 chữ trắng xám */
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* TIÊU ĐỀ CHÍNH */
+/* TIÊU ĐỀ */
 h1 {
   margin: 5px;
-  color: white; /* 🔥 trắng */
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
 
 /* NÚT ADD */
@@ -69,9 +69,9 @@ h1 {
   gap: 8px;
 }
 
-/* KHUNG TIMER */
+/* 🔥 KHUNG TIMER → đen trong */
 .timer-app {
-  background: rgba(255, 239, 200, 0.75);
+  background: rgba(0, 0, 0, 0.45);
   border-radius: 15px;
   padding: 8px 15px;
   width: 100%;
@@ -79,7 +79,8 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+  backdrop-filter: blur(6px); /* 🔥 hiệu ứng kính mờ */
 }
 
 /* INPUT */
@@ -93,13 +94,14 @@ h1 {
   width: 90%;
 }
 
+/* 🔥 ĐỒNG HỒ */
 .timer-display {
   font-size: 2.8rem;
   font-weight: bold;
   margin: 2px 0;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
   user-select: none;
-  color: rgba(0, 0, 0, 0.7); /* 🔥 đen trong */
+  color: white; /* 🔥 trắng nổi */
 }
 
 /* INPUT TIME */
