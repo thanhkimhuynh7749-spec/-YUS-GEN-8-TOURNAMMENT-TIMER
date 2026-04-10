@@ -7,32 +7,38 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background: url('1200(5).png') no-repeat center center fixed;
+  background: url('1200 (5).png') no-repeat center center fixed;
   background-size: cover;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
+  color: #333; /* đổi chữ tối hơn cho hợp nền sáng */
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* TIÊU ĐỀ */
 h1 {
-  margin: 5px; /* giảm */
-  text-shadow: 2px 2px 6px #000;
+  margin: 5px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
+/* NÚT ADD */
 #add-timer-btn {
-  margin: 5px; /* giảm */
+  margin: 5px;
   padding: 10px 20px;
   font-size: 1rem;
   border-radius: 12px;
   border: none;
-  background-color: #28a745;
+  background-color: #e63946; /* 🔴 đỏ */
   cursor: pointer;
   color: white;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+#add-timer-btn:hover {
+  background-color: #b22234;
 }
 
 #add-timer-btn:disabled {
@@ -40,15 +46,17 @@ h1 {
   cursor: not-allowed;
 }
 
+/* WRAPPER */
 #timers-wrapper {
   display: flex;
   justify-content: center;
-  gap: 20px; /* giảm */
+  gap: 20px;
   width: 100%;
   flex-grow: 1;
-  padding: 5px 10px; /* giảm */
+  padding: 5px 10px;
 }
 
+/* CONTAINER */
 #timers-container,
 #extra-timer-container {
   width: 600px;
@@ -57,24 +65,26 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px; /* 🔥 giảm khoảng cách giữa timer */
+  gap: 8px;
 }
 
+/* 🔥 KHUNG TIMER → vàng pastel đục */
 .timer-app {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 239, 200, 0.75); /* 🟡 vàng pastel */
   border-radius: 15px;
-  padding: 8px 15px; /* 🔥 giảm chiều cao */
+  padding: 8px 15px;
   width: 100%;
   max-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
 }
 
+/* INPUT */
 .name-input {
   font-size: 1.1rem;
-  margin-bottom: 5px; /* giảm */
+  margin-bottom: 5px;
   padding: 4px;
   border-radius: 8px;
   border: none;
@@ -82,16 +92,19 @@ h1 {
   width: 90%;
 }
 
+/* ĐỒNG HỒ */
 .timer-display {
   font-size: 2.8rem;
   font-weight: bold;
-  margin: 2px 0; /* 🔥 giảm */
-  text-shadow: 2px 2px 5px #000;
+  margin: 2px 0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
   user-select: none;
+  color: #5a3e1b; /* nâu đậm hợp nền vàng */
 }
 
+/* INPUT TIME */
 .time-input {
-  margin: 5px 0; /* 🔥 giảm */
+  margin: 5px 0;
   padding: 4px;
   border-radius: 8px;
   border: none;
@@ -100,25 +113,26 @@ h1 {
   font-size: 1rem;
 }
 
+/* BUTTONS */
 .buttons-container {
   display: flex;
-  gap: 6px; /* giảm */
+  gap: 6px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 2px; /* 🔥 kéo lên */
+  margin-top: 2px;
 }
 
 .buttons-container button {
-  padding: 5px 12px; /* nhỏ lại */
+  padding: 5px 12px;
   font-size: 0.95rem;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  background-color: #1e90ff;
+  background-color: #e63946; /* 🔴 đỏ */
   color: white;
-  transition: background-color 0.3s ease;
+  transition: 0.3s;
 }
 
 .buttons-container button:hover {
-  background-color: #0f68d9;
+  background-color: #b22234;
 }
