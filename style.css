@@ -20,15 +20,15 @@ html, body {
 /* 🔥 TIÊU ĐỀ TO HƠN */
 h1 {
   margin: 10px 0;
-  font-size: 2.2rem; /* 🔥 to hơn */
-  letter-spacing: 2px; /* đẹp hơn */
+  font-size: 2.2rem;
+  letter-spacing: 2px;
   color: white;
   text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
 }
 
 /* NÚT ADD */
 #add-timer-btn {
-  margin: 10px 0; /* 🔥 tạo khoảng cách */
+  margin: 10px 0;
   padding: 10px 20px;
   font-size: 1rem;
   border-radius: 12px;
@@ -49,14 +49,16 @@ h1 {
   cursor: not-allowed;
 }
 
-/* 🔥 WRAPPER XÍCH XUỐNG */
+/* 🔥 WRAPPER XÍCH XUỐNG CHUẨN HƠN */
 #timers-wrapper {
   display: flex;
   justify-content: center;
   gap: 20px;
   width: 100%;
   flex-grow: 1;
-  padding: 20px 10px; /* 🔥 đẩy xuống */
+  padding: 20px 10px;
+
+  margin-top: 60px; /* 🔥 THÊM DÒNG NÀY */
 }
 
 /* CONTAINER */
@@ -68,14 +70,14 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 12px; /* 🔥 tăng nhẹ cho thoáng */
 }
 
 /* KHUNG TIMER */
 .timer-app {
   background: rgba(0, 0, 0, 0.45);
   border-radius: 15px;
-  padding: 10px 15px;
+  padding: 12px 15px;
   width: 100%;
   max-width: 600px;
   display: flex;
@@ -88,8 +90,8 @@ h1 {
 /* INPUT */
 .name-input {
   font-size: 1.1rem;
-  margin-bottom: 5px;
-  padding: 5px;
+  margin-bottom: 6px;
+  padding: 6px;
   border-radius: 8px;
   border: none;
   text-align: center;
@@ -100,16 +102,16 @@ h1 {
 .timer-display {
   font-size: 3rem;
   font-weight: bold;
-  margin: 5px 0;
+  margin: 6px 0;
   text-shadow: 3px 3px 8px rgba(0,0,0,0.9);
   user-select: none;
-  color: white; /* 🔥 đổi sang trắng */
+  color: white;
 }
 
 /* INPUT TIME */
 .time-input {
-  margin: 5px 0;
-  padding: 5px;
+  margin: 6px 0;
+  padding: 6px;
   border-radius: 8px;
   border: none;
   width: 60%;
@@ -123,11 +125,11 @@ h1 {
   gap: 6px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 4px;
+  margin-top: 5px;
 }
 
 .buttons-container button {
-  padding: 5px 12px;
+  padding: 6px 14px;
   font-size: 0.95rem;
   border: none;
   border-radius: 8px;
